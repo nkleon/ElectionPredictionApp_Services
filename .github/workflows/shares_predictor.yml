@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: "3.14"
           cache: "pip"
-      - run: pip install firebase-admin joblib pandas scikit-learn
+      - run: pip install -r requirements.txt
       - run: python shares_predictor.py
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
